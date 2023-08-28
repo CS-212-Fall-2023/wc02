@@ -5,31 +5,41 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 
-\printanswers
-
-\title{Weekly Challenge 02: Equivalence of Finite Automata}
+\title{Weekly Challenge 02: Deterministic Finite Automata (DFA)}
 \author{CS 212 Nature of Computation\\Habib University}
-\date{Fall 2022}
+\date{Fall 2023}
 
 \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
 \boxedpoints
+
+\printanswers
 
 \begin{document}
 \maketitle
 
 \begin{questions}
   
-\titledquestion{NFA-DFA Equivalence}
+\titledquestion{The Complement Language}
 
-  Theorem 1.39 in our textbook states that, ``Every nondeterministic finite automaton has an equivalent deterministic finite automaton'', and then provides a proof by construction.
+  Consider the following finite automata and their languages.
+  \begin{itemize}
+  \item $M_1=(Q, \{0,1\}, \delta, q_o, F)$ and its language, $L_1=L(M_1)$, and
+  \item $M_2=(Q, \{0,1\}, \delta, q_o, Q-F)$ and its language, $L_2=L(M_2)$.
+  \end{itemize}
 
-  Prove that the DFA obtained from an NFA by applying the given construction is indeed equivalent. That is, show that the constructed DFA accepts the same language as the given NFA and vice versa.
+  Prove or disprove the following claim,
   
-  You are expected to submit an original proof (i.e. developed by you) that is correct and exhibits sound and precise argumentation. If you consult any sources for guidance, make sure to cite and acknowledge them duly. Your \LaTeX\ file should compile without errors on the instructors' machines. If you still use Overleaf, make sure that there are no warnings or errors. Files that do not compile cannot be graded.
+  \centerline{\fbox{
+      $L_1 = L_2'$
+    }
+  }
+  where $L'$ is the set-complement of $L$.
+
+  %%% Uncomment below to enter your solution.
+  % \begin{solution}
+    
+  % \end{solution}
   
-  \begin{solution}
-    % Enter your solution here.
-  \end{solution}
 \end{questions}
 \end{document}
 
