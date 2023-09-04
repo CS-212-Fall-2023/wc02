@@ -1,6 +1,6 @@
 \documentclass[a4paper]{exam}
 
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb, amsthm}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -35,10 +35,27 @@
   }
   where $L'$ is the set-complement of $L$.
 
-  %%% Uncomment below to enter your solution.
-  % \begin{solution}
-    
-  % \end{solution}
+  Uncomment below to enter your solution.
+  \begin{solution}
+
+    \begin{proof}  We prove that $L_1 \subseteq L_2'$ and that $L_2' \subseteq L_1$. We leverage the observation that because the set of states, alphabet, and transition function are identical in $M_1$ and $M_2$, both machines are in the same state after reading a given string.
+      
+      \underline{Case 1}: $L_1 \subseteq L_2'$
+
+      Assume a string $w\in L_1$ and let $q$ be the state of $M_1$ after reading $w$.\\
+      Then, $q\in F$.\\
+      $\therefore q\not\in (Q-F)$\\
+      $\therefore w\not\in L_2$\\
+      $\therefore w\in L_2'$\\\smallskip
+
+      \underline{Case 2}: $L_2' \subseteq L_1$
+
+      Assume a string $w\in L_2'$ and let $q$ be the state of $M_2$ after reading $w$.\\
+      Then, $q\not\in (Q-F)$.\\
+      $\therefore q\in F$\\
+      $\therefore w\in L_1$      
+    \end{proof}
+  \end{solution}
   
 \end{questions}
 \end{document}
